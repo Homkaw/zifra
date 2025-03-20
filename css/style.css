@@ -166,11 +166,17 @@ body{
     }
 
     .fullscreen img {
-        width: 40%; /* Уменьшаем ширину изображения */
-        max-height: 400px;
+        width: 90%; /* Уменьшаем ширину изображения */
+        max-height: 300px;
         object-fit: cover;
         margin-top: 20px;
         margin-left: 0;
+    }
+
+    .ful-img{
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     .text {
