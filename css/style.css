@@ -1,0 +1,195 @@
+/* Основные стили (desktop) - Твои текущие стили */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "FuroreRegular";
+    src: url("../fonts/FuroreRegular.ttf");
+}
+
+
+body{
+    font-family: "FuroreRegular";
+    background: url(../img/Паттерн_Ацпр.png) no-repeat center center fixed;
+    overflow: hidden;
+}
+
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+.header{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.social{
+    display: flex;
+    font-size: 15px;
+    align-items: center;
+}
+
+.social img{
+    width: 30px;
+    margin-left: 10px;
+}
+
+
+.trans{
+    display: flex;
+}
+
+.trans p{
+    font-size: 20px;
+    padding: 0 7px;
+}
+
+.but{
+    border: none;
+    font-family: "FuroreRegular";
+    font-size: 20px;
+    background-color: rgba(255, 222, 173, 0);
+}
+
+.but:hover{
+    cursor: pointer;
+    color: #4153dbc0;
+}
+
+.but:active{
+    color: #3240a7;
+}
+
+.active{
+    color: #4153DB;
+}
+
+.fullscreen{
+    display: flex;
+    position: relative;
+}
+
+.fullscreen img{
+    width: 60%;
+    margin-top: 120px;
+    margin-left: 150px;
+}
+
+.ful-img{
+    width: 900px;
+}
+
+.text{
+    width: 700px;
+    margin-top: 11%;
+    right: 0;
+}
+
+.title{
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+
+.text-p{
+    line-height: 120%;
+    font-size: 23px;
+}
+
+
+.button{
+    margin-top: 25px;
+    background-color: #171717;
+    color: #E6E6E6;
+    font-family: "FuroreRegular";
+    padding: 20px 80px;
+    font-size: 16px;
+}
+
+.button:hover{
+    cursor: pointer;
+    background-color: #000000;
+}
+
+/* Медиа-запрос для экранов шириной до 768px (мобильные телефоны) */
+@media (max-width: 768px) {
+    .container {
+        width: 100%; /* Занимает всю ширину экрана */
+        padding: 0 10px; /* Отступы слева и справа */
+        box-sizing: border-box; /* Чтобы padding не увеличивал ширину */
+    }
+
+    .fullscreen {
+        flex-direction: column; /* Элементы располагаются вертикально */
+        align-items: center; /* Выравнивание по центру */
+    }
+
+    .fullscreen img {
+        width: 90%; /* Уменьшаем ширину изображения */
+        max-height: 300px;
+        object-fit: cover;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .ful-img{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .text{
+        width: 90%;
+    }
+}
+
+/* Медиа-запрос для экранов шириной  от 768px до 992px (планшеты) */
+@media (min-width: 768px) and (max-width: 992px){
+    .container {
+        width: 100%; /* Занимает всю ширину экрана */
+        padding: 0 10px; /* Отступы слева и справа */
+        box-sizing: border-box; /* Чтобы padding не увеличивал ширину */
+    }
+
+    .fullscreen {
+        flex-direction: row; /* Элементы располагаются горизонтально */
+        align-items: flex-start; /* Выравнивание по верхнему краю */
+        justify-content: center; /* Центрируем по горизонтали */
+    }
+
+    .fullscreen img {
+        width: 40%; /* Уменьшаем ширину изображения */
+        max-height: 400px;
+        object-fit: cover;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .text {
+        width: 50%; /* Уменьшаем ширину текстового блока */
+        margin-top: 20px;
+        margin-left: 20px; /* Добавляем отступ между картинкой и текстом */
+    }
+
+    .title {
+        font-size: 30px; /* Уменьшаем размер шрифта */
+    }
+
+    .text-p {
+        font-size: 18px; /* Уменьшаем размер шрифта */
+    }
+
+    .ful-img{
+        width: auto; /* Убираем фиксированную ширину */
+        display: block;
+    }
+}
